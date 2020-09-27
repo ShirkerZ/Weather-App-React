@@ -28,7 +28,7 @@ function App() {
 
   const getWeather = async ()=>{
 
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=72fe768d404c5e2c3777a7ca2754ca13`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=72fe768d404c5e2c3777a7ca2754ca13`);
     const data = await response.json();
     console.log(data);
     
@@ -38,7 +38,7 @@ function App() {
   }
 
   const getWeatherCurrentLocation = async ()=>{
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=72fe768d404c5e2c3777a7ca2754ca13`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=72fe768d404c5e2c3777a7ca2754ca13`);
     const data = await response.json();
 
     setTemperature(data.main);
