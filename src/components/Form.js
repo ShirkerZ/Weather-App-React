@@ -8,7 +8,7 @@ const Form = ({ setQuery, setCity, city, setLongitude, setLatitude }) => {
   const getQuery = (e) => {
     e.preventDefault();
     setQuery(city);
-    setCity("");
+    //setCity("");
   };
 
   const getLocation = (e) => {
