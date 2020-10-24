@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ setQuery, setCity, city, setLongitude, setLatitude }) => {
+const Form = ({ setQuery, setCity, city, setLongitude, setLatitude, getWeatherCurrentLocation }) => {
   const updateSearch = (e) => {
     setCity(e.target.value);
   };
@@ -8,7 +8,7 @@ const Form = ({ setQuery, setCity, city, setLongitude, setLatitude }) => {
   const getQuery = (e) => {
     e.preventDefault();
     setQuery(city);
-    //setCity("");
+    setCity("");
   };
 
   const getLocation = (e) => {
@@ -19,16 +19,17 @@ const Form = ({ setQuery, setCity, city, setLongitude, setLatitude }) => {
         setLongitude(position.coords.longitude);
       });
     }
+    getWeatherCurrentLocation();
   };
 
   return (
     <form onSubmit={getQuery}>
       <label htmlFor="query">Insert city name</label>
       <div className="input">
-        <button onClick={getLocation} className="btn-location">
+        <div onClick={getLocation} className="btn-location">
           <i className="fas fa-map-marker-alt"></i>
-        </button>
-        <input onChange={updateSearch} type="text" id="city" name="query" />
+        </div>
+        <input onChange={updateSearch} type="text" id="city" value={city}/>
         <button type="submit" className="submit">
           Search
         </button>
