@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div  className="App">
-      <Form setQuery={setQuery} city={city} setCity={setCity} setLatitude={setLatitude} setLongitude={setLongitude}/>
+      <Form setQuery={setQuery} city={city} setCity={setCity} setLatitude={setLatitude} setLongitude={setLongitude} getWeatherCurrentLocation={getWeatherCurrentLocation}/>
       <Timezone location={location} imgSrc={imgSrc} setImgSrc={setImgSrc} weather={weather}/>
       <Temperature temperature={temperature} weather={weather}/>
     </div>

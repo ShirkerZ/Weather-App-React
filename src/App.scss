@@ -34,6 +34,14 @@ body {
                 padding: .7rem;
                 font-size: 1.5rem;
                 border-radius: 15px;
+                background-color: rgb(241, 122, 53);
+                color: white;
+                cursor: pointer;
+                transition: background-color .5s ease, color .5s ease;
+                &:hover {
+                    color: rgb(241, 122, 53);
+                    background-color: white;
+                }
             }
             input {
                 border-radius: 20px;
@@ -55,7 +63,6 @@ body {
                 cursor: pointer;
                 transition: background-color .5s ease, color .5s ease;
                 &:hover {
-                    //background-color: rgb(231, 103, 28);
                     color: rgb(241, 122, 53);
                     background-color: white;
                 }

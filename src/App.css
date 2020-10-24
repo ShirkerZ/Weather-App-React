@@ -65,6 +65,16 @@ body form .input .btn-location {
   padding: .7rem;
   font-size: 1.5rem;
   border-radius: 15px;
+  background-color: #f17a35;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+body form .input .btn-location:hover {
+  color: #f17a35;
+  background-color: white;
 }
 
 body form .input input {
